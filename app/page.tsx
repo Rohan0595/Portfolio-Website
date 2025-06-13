@@ -61,6 +61,13 @@ export default function Home() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 group-hover:w-full transition-all duration-300" />
             </Link>
             <Link
+              href="#certifications"
+              className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group"
+              >
+              Certifications
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 group-hover:w-full transition-all duration-300" />
+            </Link>
+            <Link
               href="#experience"
               className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group"
             >
@@ -251,7 +258,8 @@ export default function Home() {
         <section id="skills" className="py-16 md:py-24">
           <div className="container space-y-8">
             <div className="space-y-2 text-center">
-              <h2 className="text-3xl font-bold tracking-tight">My Skills</h2>
+              <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">Skills</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full mx-auto"></div>
               <p className="text-muted-foreground">Technologies and tools I work with</p>
             </div>
             <Tabs defaultValue="design" className="w-full">
@@ -351,30 +359,61 @@ export default function Home() {
         >
           <div className="container space-y-8">
             <div className="space-y-2 text-center">
-              <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
+              <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">Featured Projects</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full mx-auto"></div>
               <p className="text-muted-foreground">Some of my recent work</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
-                  title: "Smart Home Automation",
-                  description: "IoT-based home automation system with mobile app control",
-                  tags: ["IoT", "React Native", "Arduino"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  title: "Finance Management System",
+                  description: "A comprehensive financial management solution with expense tracking, budget planning, and financial reporting features.",
+                  tags: ["TailWind CSS", "React", "TypeScript", "MySQL"],
+                  image: "/finance-management.jpeg",
                   gradient: "from-blue-500 to-cyan-500",
+                  link: "https://github.com/yourusername/finance-management"
                 },
                 {
-                  title: "E-Commerce UI Redesign",
-                  description: "Complete UI/UX overhaul for an e-commerce platform",
-                  tags: ["UI/UX", "Figma", "Prototyping"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  title: "Portfolio Website",
+                  description: "A personal portfolio website to showcase projects, skills, and certifications with smooth UI, responsive design, and interactive sections.",
+                  tags: ["TypeScript", "CSS", "JavaScript", "React"],
+                  image: "/portfolio.png",
                   gradient: "from-orange-500 to-red-500",
+                  link: "https://github.com/Rohan0595/Portfolio-Website"
                 },
                 {
-                  title: "Health Monitoring Wearable",
-                  description: "IoT wearable device for real-time health monitoring",
-                  tags: ["IoT", "Embedded Systems", "Data Analysis"],
-                  image: "/placeholder.svg?height=300&width=400",
+                  title: "Pet Adoption and Rescue System",
+                  description: "A web-based Pet Adoption and Rescue System to connect shelters with potential adopters, featuring pet listings, adoption forms, and real-time updates.",
+                  tags: ["React.js", "Node.js", "TypeScript", "TailWind CSS", "MySQL"],
+                  image: "/pet-adoption-rescue.png",
+                  gradient: "from-teal-500 to-emerald-500",
+                },
+                {
+                  title: "RFID based Payment System",
+                  description: "An RFID-based Payment System enabling contactless transactions using RFID tags, with secure authentication, real-time balance updates, and usage tracking.",
+                  tags: ["React", "Chart.js", "TailWind CSS", "API Integration", "Responsive"],
+                  image: "/rfid-payment-system.png",
+                  gradient: "from-teal-500 to-emerald-500",
+                },
+                {
+                  title: "Expense Tracker",
+                  description: "A web-based Expense Tracker application for managing personal finances, tracking expenses, and visualizing spending patterns with interactive charts.",
+                  tags: ["React", "Chart.js", "TailWind CSS", "API Integration", "Responsive"],
+                  image: "/expense-tracker.jpeg",
+                  gradient: "from-teal-500 to-emerald-500",
+                },
+                {
+                  title: "Task Scheduler",
+                  description: "A web-based Task Scheduler for organizing daily activities, setting deadlines, and tracking progress with notifications and a clean, responsive UI.",
+                  tags: ["HTML", "CSS", "JavaScript", "SQLite", "Spark API", "Java"],
+                  image: "/task-scheduler.png",
+                  gradient: "from-teal-500 to-emerald-500",
+                },
+                {
+                  title: "AI Recipe Generator",
+                  description: "A web-based AI Recipe Generator that suggests personalized recipes using user inputs and available ingredients, with step-by-step instructions and nutrition insights.",
+                  tags: ["React", "MongoDb", "Next Auth", "TailWind CSS", "TypeScript", "OpenAI API"],
+                  image: "/ai-recipe-generator.jpeg",
                   gradient: "from-teal-500 to-emerald-500",
                 },
               ].map((project, index) => (
@@ -408,17 +447,32 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-github"
+                        >
+                          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                          <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        View Project
+                      </a>
+                    )}
                   </CardContent>
-                  <CardFooter>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="gap-1 group/btn hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 dark:hover:from-purple-900/20 dark:hover:to-pink-900/20"
-                    >
-                      View Project{" "}
-                      <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </CardFooter>
                 </Card>
               ))}
             </div>
@@ -431,6 +485,112 @@ export default function Home() {
                 View All Projects
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section
+          id="certifications"
+          className="py-16 md:py-24 bg-gradient-to-r from-slate-100/50 to-slate-200/50 dark:from-slate-800/50 dark:to-slate-900/50"
+        >
+          <div className="container space-y-8">
+            <div className="space-y-2 text-center">
+              <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent">Certifications</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full mx-auto"></div>
+              <p className="text-muted-foreground">Professional certifications and achievements</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "Udemy C Programming",
+                  issuer: "Udemy",
+                  date: "June 2025",
+                  description: "Foundational knowledge of C programming, including data types, functions, pointers, memory management, and file handling.",
+                  image: "/udemy-c-certificate.png",
+                  link: "/C Certificate.pdf"
+                },
+                {
+                  title: "Scaler Database Management System",
+                  issuer: "Scaler",
+                  date: "May 2025",
+                  description: "Comprehensive understanding of database design, SQL, normalization, transactions, and database optimization techniques.",
+                  image: "/scaler-dbms.png",
+                  link: "/DBMS Course Certificate.pdf"
+                },
+                {
+                  title: "NPTEL Java Programming",
+                  issuer: "NPTEL",
+                  date: "October 2024",
+                  description: "Advanced Java programming concepts including OOP, multithreading, collections, and GUI development.",
+                  image: "/nptel.png",
+                  link: "/Programming in Java.pdf"
+                },
+                {
+                  title: "Udemy Machine Learning",
+                  issuer: "Udemy",
+                  date: "June 2025",
+                  description: "Completed Udemy Machine Learning course covering supervised and unsupervised learning, regression, classification, and model optimization techniques.",
+                  image: "/udemy-ml.png",
+                  link: "/ML Certificate.pdf"
+                }
+              ].map((cert, index) => (
+                <Card
+                  key={index}
+                  className="overflow-hidden glass-effect hover:shadow-2xl transition-all duration-300 group hover:scale-105"
+                >
+                  <div className="aspect-video relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20" />
+                    <Image
+                      src={cert.image || "/placeholder.svg"}
+                      alt={cert.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                      {cert.title}
+                    </CardTitle>
+                    <CardDescription>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <span>{cert.issuer}</span>
+                        <span>•</span>
+                        <span>{cert.date}</span>
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-4">{cert.description}</p>
+                    {cert.link && (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-award"
+                        >
+                          <path d="M12 9v6" />
+                          <path d="M12 3a9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9 9 9 0 0 0-9-9z" />
+                          <path d="M12 3v6" />
+                        </svg>
+                        View Certificate
+                      </a>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
