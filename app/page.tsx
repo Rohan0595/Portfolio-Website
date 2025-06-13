@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Code, Download, ExternalLink, Layers, Mail, MapPin, Phone, Sparkles, Github, Linkedin, Instagram, ChevronDown, Rocket, AlarmClock, Heart } from "lucide-react"
+import { ArrowRight, Code, Download, ExternalLink, Layers, Mail, MapPin, Phone, Sparkles, Github, Linkedin, Instagram, ChevronDown, Rocket, AlarmClock, Heart, Coffee } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -21,16 +21,28 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b border-white/20 dark:border-white/10 glass-effect">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 font-bold group">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-white font-bold text-sm">RB</span>
+            <div className="w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Image
+                src="/header-logo.png"
+                alt="Rohan Bandari Logo"
+                width={64}
+                height={64}
+                className="object-cover rounded-full"
+              />
             </div>
-            <span className="text-xl bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">RB</span>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link
-              href="#about"
+              href="#home"
               className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group"
-            >
+              >
+              Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 group-hover:w-full transition-all duration-300" />
+            </Link>
+            <Link
+              href="#skills"
+              className="text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group"
+              >
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 group-hover:w-full transition-all duration-300" />
             </Link>
@@ -82,21 +94,20 @@ export default function Home() {
                   Full Stack Developer
                 </h2>
               </div>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                I'm a BTech CSE student specializing in IoT, passionate about creating beautiful, functional solutions
-                at the intersection of design and technology.
+              <p className="text-l text-muted-foreground leading-relaxed">
+              I craft exceptional digital experiences that seamlessly blend sophisticated design with powerful functionality. Passionate about building scalable applications that drive real business impact and delight users.
               </p>
               <div className="flex gap-4 mb-4">
-                <Link href="https://github.com" target="_blank" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                <Link href="https://github.com/Rohan0595" target="_blank" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                   <Github className="h-6 w-6" />
                 </Link>
-                <Link href="https://linkedin.com" target="_blank" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                <Link href="https://www.linkedin.com/in/rohan-bandari-651787287/" target="_blank" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </Link>
-                <Link href="https://instagram.com" target="_blank" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                <Link href="https://www.instagram.com/_rohanbandari/" target="_blank" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                   <Instagram className="h-6 w-6" />
                 </Link>
-                <Link href="mailto:rohan.bandari@example.com" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                <Link href="mailto:rohanbandari0509@gmail.com" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                   <Mail className="h-6 w-6" />
                 </Link>
               </div>
@@ -133,6 +144,12 @@ export default function Home() {
                     priority
                   />
                 </div>
+                <div className="absolute top-[-2rem] left-[-2rem] w-12 h-12 rounded-full flex items-center justify-center shadow-lg bg-slate-800">
+                  <Coffee className="h-6 w-6 text-orange-400" />
+                </div>
+                <div className="absolute bottom-[-2rem] right-[-2rem] w-12 h-12 rounded-full flex items-center justify-center shadow-lg bg-slate-800">
+                  <Heart className="h-6 w-6 text-red-400" />
+                </div>
               </div>
             </div>
           </div>
@@ -163,18 +180,15 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                     Hey there, I'm Rohan
                   </h3>
-                  <p className="text-lg mb-4">
-                    I'm a third-year BTech CSE student at SRM University, Kattankulathur, Chennai, specializing in
+                  <p className="mb-4">
+                    I'm a third-year BTech CSE student at SRM Institute of Science and Technology, Kattankulathur, Chennai, specializing in
                     Internet of Things (IoT).
                   </p>
                   <p className="mb-4">
-                    I blend design thinking with engineering precision to create solutions that are both beautiful and
-                    functional. My passion lies in developing innovative IoT applications that solve real-world
-                    problems.
+                  A passionate and curious developer at the start of my tech journey. I love turning ideas into reality with code, and I'm always eager to learn something new whether it's a framework, a design trick, or a random fact from the internet.
                   </p>
                   <p>
-                    When I'm not coding or designing, you can find me exploring new technologies, participating in
-                    hackathons, or collaborating on interdisciplinary projects.
+                  I thrive on collaboration, late-night brainstorming, and the occasional meme break. If it involves building, experimenting, or just doing things a little differently, I'm in!
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
@@ -192,7 +206,7 @@ export default function Home() {
                         <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:animate-pulse">
                           <AlarmClock className="h-6 w-6 text-white" />
                         </div>
-                        <p className="text-3xl font-bold mb-1">1+</p>
+                        <p className="text-3xl font-bold mb-1">2+</p>
                         <p className="text-sm text-muted-foreground">Years Experience</p>
                       </CardContent>
                     </Card>
@@ -255,19 +269,17 @@ export default function Home() {
                   Development
                 </TabsTrigger>
                 <TabsTrigger
-                  value="iot"
+                  value="programming"
                   className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-cyan-600 data-[state=active]:text-white"
                 >
-                  IoT
+                  Programming
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="design" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {[
                     "Figma",
-                    "Adobe XD",
                     "Photoshop",
-                    "Illustrator",
                     "UI/UX",
                     "Wireframing",
                     "Prototyping",
@@ -288,8 +300,8 @@ export default function Home() {
                 </div>
               </TabsContent>
               <TabsContent value="development" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {["JavaScript", "React", "Node.js", "Python", "Java", "HTML/CSS", "MongoDB", "Git"].map((skill) => (
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {["JavaScript", "React", "Node.js", "Python", "Next.js", "HTML/CSS", "MongoDB", "PostGreSQL", "Git"].map((skill) => (
                     <Card
                       key={skill}
                       className="text-center glass-effect hover:shadow-lg transition-all duration-300 group hover:scale-105"
@@ -304,17 +316,15 @@ export default function Home() {
                   ))}
                 </div>
               </TabsContent>
-              <TabsContent value="iot" className="mt-6">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <TabsContent value="programming" className="mt-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {[
-                    "Arduino",
-                    "Raspberry Pi",
-                    "Sensors",
-                    "MQTT",
-                    "ESP32",
-                    "IoT Protocols",
-                    "Cloud IoT",
-                    "Embedded Systems",
+                    "C",
+                    "C++",
+                    "Java",
+                    "Python",
+                    "MySQL",
+                    "Kotlin",
                   ].map((skill) => (
                     <Card
                       key={skill}
@@ -443,31 +453,64 @@ export default function Home() {
             </div>
 
             {/* Experience entries will go here */}
-            <div className="space-y-8">
-              {/* Example Experience Card */}
-              <Card className="glass-effect dark:bg-slate-900/50 p-6 border border-white/20 dark:border-slate-700/50 shadow-xl">
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                  Founders Club 
-                </h3>
-                <p className="text-muted-foreground mb-4">Acme Corp | Jan 2023 - Present</p>
-                <ul className="list-disc list-inside space-y-2 text-lg">
-                  <li>Developed and maintained web applications using React and Node.js.</li>
-                  <li>Collaborated with a team of engineers to design and implement new features.</li>
-                  <li>Optimized application performance and improved user experience.</li>
-                </ul>
-              </Card>
-
-              <Card className="glass-effect dark:bg-slate-900/50 p-6 border border-white/20 dark:border-slate-700/50 shadow-xl">
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                  Dbug Labs
-                </h3>
-                <p className="text-muted-foreground mb-4">University Lab | May 2022 - Dec 2022</p>
-                <ul className="list-disc list-inside space-y-2 text-lg">
-                  <li>Conducted research on secure IoT communication protocols.</li>
-                  <li>Built prototypes of smart devices using Arduino and Raspberry Pi.</li>
-                  <li>Analyzed sensor data and developed data visualization dashboards.</li>
-                </ul>
-              </Card>
+            <div className="space-y-12">
+              {[{
+                organizationName: "Founders Club",
+                logoSrc: "/founders-club-actual-logo.png",
+                roles: [{
+                  title: "President",
+                  duration: "Feb 2025 – Present"
+                }, {
+                  title: "Outreach Lead",
+                  duration: "Aug 2024 – Feb 2025"
+                }, {
+                  title: "Member",
+                  duration: "Oct 2023 – Aug 2024"
+                }],
+              }, {
+                organizationName: "dBug Labs",
+                logoSrc: "/dbug-labs-logo.png",
+                roles: [{
+                  title: "Events Lead",
+                  duration: "Oct 2024 – Present"
+                }, {
+                  title: "Associate Lead",
+                  duration: "Apr 2024 – Oct 2024"
+                }, {
+                  title: "Member",
+                  duration: "Nov 2023 – Apr 2024"
+                }],
+              }].map((org, index) => (
+                <div key={index} className="flex flex-col md:flex-row items-start gap-7">
+                  <div className="flex-shrink-0 w-24 h-24 relative bg-white dark:bg-slate-800 rounded-full flex items-center justify-center p-1 shadow-lg">
+                    <Image 
+                      src={org.logoSrc} 
+                      alt={org.organizationName} 
+                      fill 
+                      className="object-contain p-2 rounded-full" 
+                      sizes="(max-width: 768px) 96px, 96px"
+                    />
+                  </div>
+                  <div className="flex-1 space-y-4">
+                    <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
+                      {org.organizationName}
+                    </h3>
+                    <div className="space-y-4">
+                      {org.roles.map((role, roleIndex) => (
+                        <div key={roleIndex} className="flex items-center gap-4">
+                          <div className="w-4 h-4 rounded-full bg-gradient-to-r from-orange-400 to-red-500 flex-shrink-0" />
+                          <Card className="flex-1 p-4 glass-effect dark:bg-slate-900/50 border border-white/20 dark:border-slate-700/50 shadow-md">
+                            <div className="flex justify-between items-center">
+                              <p className="text-lg font-bold">{role.title}</p>
+                              <p className="text-sm text-muted-foreground">{role.duration}</p>
+                            </div>
+                          </Card>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -477,13 +520,11 @@ export default function Home() {
       <footer className="relative overflow-hidden bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="absolute inset-0 overflow-hidden opacity-10">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container relative z-10 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="md:col-span-4 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-4">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">RB</span>
@@ -496,31 +537,13 @@ export default function Home() {
                 A passionate designer and engineer specializing in IoT solutions. Creating innovative technology that
                 solves real-world problems.
               </p>
-              <div className="flex gap-4 pt-4">
-                {[
-                  { icon: "linkedin", gradient: "from-blue-600 to-blue-700" },
-                  { icon: "github", gradient: "from-gray-700 to-gray-800" },
-                  { icon: "twitter", gradient: "from-blue-400 to-cyan-500" },
-                  { icon: "instagram", gradient: "from-orange-500 to-red-600" },
-                ].map((social, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    size="icon"
-                    className={`rounded-full bg-gradient-to-r ${social.gradient} text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl`}
-                  >
-                    <div className="h-5 w-5" />
-                    <span className="sr-only">{social.icon}</span>
-                  </Button>
-                ))}
-              </div>
             </div>
 
-            <div className="md:col-span-2 space-y-4">
+            <div className="space-y-4">
               <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Quick Links
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-left">
                 <li>
                   <Link href="#about" className="text-slate-300 hover:text-white transition-colors">
                     About
@@ -539,46 +562,29 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="md:col-span-3 space-y-4">
+            <div className="space-y-4">
               <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Contact Info
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-3 text-left">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-blue-400" />
-                  <span className="text-slate-300">rohan.bandari@example.com</span>
+                  <span className="text-slate-300">rohanbandari0509@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-blue-400" />
-                  <span className="text-slate-300">+91 98765 43210</span>
+                  <span className="text-slate-300">+91 70940 40612</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-blue-400" />
-                  <span className="text-slate-300">Chennai, Tamil Nadu, India</span>
+                  <span className="text-slate-300">Hyderabad, Telangana, India</span>
                 </div>
-              </div>
-            </div>
-
-            <div className="md:col-span-3 space-y-4">
-              <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Newsletter
-              </h3>
-              <p className="text-slate-300">Subscribe to receive updates on my latest projects and tech insights.</p>
-              <div className="flex gap-2 mt-4">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-4 py-2 rounded-lg bg-slate-800/50 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <Button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white border-0">
-                  Subscribe
-                </Button>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-slate-800 text-center">
-            <p className="text-slate-400">© {new Date().getFullYear()} Rohan Bandari. All rights reserved.</p>
+          <div className="mt-12 pt-6 border-t border-slate-800 text-left">
+            <p className="text-slate-400">© {new Date().getFullYear()} Rohan Bandari. Made with ❤️ and a lots of ☕.</p>
           </div>
         </div>
       </footer>
